@@ -1,0 +1,70 @@
+/* ロゴ全体 */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: overlayFadeOut 3s forwards;
+}
+
+.overlay-text {
+  margin: 0;
+  font-family: var(--font-logo);
+  font-weight: 500;
+  font-size: clamp(28px, 6vw, 52px);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  color: var(--green);
+  writing-mode: vertical-rl;
+  text-align: center;
+  opacity: 0;
+  animation: textFloat 6s ease forwards;
+}
+
+@keyframes textFloat {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 全体が消える */
+@keyframes overlayFadeOut {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* 本文は最初非表示 */
+#main-content {
+  opacity: 0;
+  animation: mainFadeIn 1.5s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

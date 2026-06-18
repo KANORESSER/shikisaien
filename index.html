@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四季彩園 SHIKISAIEN｜串本ポンカンジュース</title>
+<meta name="description" content="和歌山県・本州最南端の串本町。太陽の恵みをまるごとしぼった、四季彩園の果肉入り100％ストレートポンカンジュース。無添加・有機栽培。">
+<!-- 文字化け防止のため JS が有効なら html に .js を付与（スクロール演出のフォールバック用） -->
+<script>document.documentElement.className += ' js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Kaisei+Decol:wght@400;500;700&family=Zen+Antique&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="css/overlay.css"> -->
+</head>
+<body>
+<div class="grain-overlay"></div>
+
+<!-- Overlay -->
+<!-- <section id="overlay">
+  <p class="overlay-text">
+    太陽の恵みを<br>まるごとひとつに。
+  </p>
+</section> -->
+
+<section id="main-content">
+  <!-- ===== 固定ヘッダー（スクロールで出現） ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-header-logo">
+      <p class="site-header-logo__ja">四季<span class="site-header-logo__accent">彩</span>園</p>
+      <p class="site-header-logo__en">SHIKISAIEN</p>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <svg class="nav-toggle__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><clipPath id="fruitClip"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+        <circle cx="20" cy="20" r="19" fill="var(--orange)"/>
+        <circle cx="20" cy="20" r="16" fill="white"/>
+        <circle cx="20" cy="20" r="14" fill="var(--orange)"/>
+        <g clip-path="url(#fruitClip)">
+          <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+          <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+          <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+          <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+        </g>
+      </svg>
+      <span class="nav-toggle__label">MENU</span>
+    </button>
+  </header>
+
+  <!-- ドロワーナビ -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <button class="nav-drawer__close" id="navClose" aria-label="閉じる">✕</button>
+    <nav class="nav-drawer__nav">
+      <ul>
+        <li><a href="#farm">四季彩園について</a></li>
+        <li><a href="#kodawari">ポンカンへのこだわり</a></li>
+        <li><a href="#products">ポンカンを味わう</a></li>
+        <li><a href="#kushimoto">串本のこと</a></li>
+        <li><a href="#contact">ご注文・お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== 追従CTA（スクロールで出現） ===== -->
+  <!-- <a class="float-cta" id="floatCta" href="#contact">ご注文はこちら</a> -->
+
+  <main class="wrap">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="四季彩園 串本ポンカンジュース">
+      <h1 class="hero__title reveal">太陽の恵みを<br>　まるごとひとつに</h1>
+    </section>
+
+    <!-- ===== 四季彩園について ===== -->
+    <section class="section" id="farm">
+      <h2 class="section-title reveal">串本に根ざす、<br>四季彩園</h2>
+      <div class="reveal">
+        <p>本州最南端の串本町。燦々と降り注ぐ太陽と黒潮が育む温暖な気候のなか、四季彩園は代々ポンカン栽培を続けています。</p>
+        <div class="map-wrapper">
+          <img src="assets/img/wakayama-map.png" class="wakayama-map" alt="和歌山県の地図">
+          <span class="map-caption">串本町姫</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p>約50a（5,000㎡）の農園で、量より質を大切に。一つひとつ手をかけて育てるために、栽培できる量には限りがあります。</p>
+      </div>
+      <img src="assets/img/cultivate.png" alt="ポンカン栽培風景" class="cultivate-img reveal">
+    </section>
+
+    <!-- ===== garland ===== -->
+    <div class="garland" aria-hidden="true"></div>
+
+    <!-- ===== 大切にしていること ===== -->
+    <section class="section" id="values">
+      <h2 class="section-title reveal">大切にしていること</h2>
+      <div class="values reveal">
+        <div class="value">
+          <div class="value__head"><span class="value__no">1</span><h3 class="value__title">おいしいと、向き合い続ける</h3></div>
+          <p class="value__text">「おいしい」には終わりがありません。収穫のたびに自分たちで食べて味を確かめ、毎年少しずつ理想に近づいていく。それが四季彩園の農業です。</p>
+        </div>
+        <div class="value">
+          <div class="value__head"><span class="value__no">2</span><h3 class="value__title">口にするものだから</h3></div>
+          <p class="value__text">家族が食べるものと同じものをお届けしたい。だから農薬も化学肥料も使わない。安心して食べてもらえることが、一番のこだわりです。</p>
+        </div>
+        <div class="value value--last">
+          <div class="value__head"><span class="value__no">3</span><h3 class="value__title">串本のポンカンを、広めたい</h3></div>
+          <p class="value__text">本州最南端のまち串本で育ったポンカン。この土地の豊かさを、一口のおいしさとして全国に届けたいと思っています。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== garland ===== -->
+    <div class="garland" aria-hidden="true"></div>
+
+    <!-- ===== ポンカンへのこだわり ===== -->
+    <section class="center section" id="kodawari">
+      <div class="reveal">
+        <h2 class="section-title">四季彩園のポンカンへのこだわり</h2>
+        <p class="lead">甘いだけではない、絶妙な糖酸バランス。雑味がなく、スッキリとした後味——それが四季彩園のポンカンです。土づくりから収穫まで、おいしいと向き合い続けることがわたしたちの農園の姿勢です。</p>
+      </div>
+
+      <div class="duo reveal">
+        <img src="assets/img/juice_bottle.jpg" alt="四季彩園のポンカンジュース">
+        <img src="assets/img/ponkan_tree.jpg" alt="完熟ポンカン">
+      </div>
+
+      <div class="thought-cloud-wrap reveal"><span class="thought-cloud">おいしいポンカンの秘訣</span></div>
+      <div class="reasons reveal">
+        <article class="reason">
+          <div class="reason__head"><span class="reason__no">01</span><h3 class="reason__title">本州最南端の太陽</h3></div>
+          <p class="reason__text">串本町は年間を通じて温暖。燦々と降り注ぐ太陽のもとで育ったポンカンは糖度12度以上。深い甘みとスッキリした後味を生みだします。</p>
+        </article>
+        <article class="reason">
+          <div class="reason__head"><span class="reason__no">02</span><h3 class="reason__title">甘いだけじゃない、糖酸バランス</h3></div>
+          <p class="reason__text">糖度12度以上でありながら、甘さと酸味が絶妙にバランス。雑味がなくスッキリとした後味で、ついついたくさん食べてしまうと好評です。</p>
+        </article>
+        <article class="reason">
+          <div class="reason__head"><span class="reason__no">03</span><h3 class="reason__title">ひとつひとつ、手で選ぶ</h3></div>
+          <p class="reason__text">選果機は使わず、ひとつひとつ手に持って見て、触れて、重さを感じながら選別。予措（追熟）をせず収穫後すぐ出荷するから、フレッシュでジューシーなポンカン本来のおいしさが届きます。</p>
+        </article>
+        <article class="reason">
+          <div class="reason__head"><span class="reason__no">04</span><h3 class="reason__title">土づくりから、有機栽培</h3></div>
+          <p class="reason__text">有機率100％の有機肥料・自作有機堆肥を使用。イセエビガラ、卵ガラ、ヌカ、モミガラなど約10種類の素材から作る堆肥で、土の力からおいしさを育てています。</p>
+        </article>
+      </div>
+
+      <div class="result reveal">
+        <p>収穫のたびに自分たちで食べて味を確かめる。<br>おいしいを守るために、妥協しない。<br>それが<span class="result__brand">四季彩園</span>の<br><span class="result__product">ポンカンづくり</span>です。</p>
+      </div>
+    </section>
+
+    <!-- ===== ポンカンを味わう ===== -->
+    <div class="garland" aria-hidden="true"></div>
+    <section class="center section" id="products">
+      <div class="reveal">
+        <h2 class="section-title">ポンカンを味わう</h2>
+        <p class="lead">四季彩園のポンカンは、さまざまな形でお楽しみいただけます。ご注文・お問い合わせはお電話またはメールにて承っております。</p>
+      </div>
+      <div class="products reveal">
+        <article class="product">
+          <p class="product__icon">🍊</p>
+          <h3 class="product__name">ポンカン</h3>
+          <p class="product__text">厳選した完熟ポンカンをそのまま。フレッシュでジューシーな食感をお楽しみください。</p>
+        </article>
+        <article class="product">
+          <p class="product__icon">🧃</p>
+          <h3 class="product__name">ポンカンジュース</h3>
+          <p class="product__text">収穫後すぐに搾った100%ストレートジュース。無添加でポンカンそのままの味わいです。</p>
+        </article>
+        <article class="product">
+          <p class="product__icon">🫙</p>
+          <h3 class="product__name">ポンカンジュレ</h3>
+          <p class="product__text">ポンカンの風味をそのままに閉じ込めた、なめらかなジュレ。贈り物にも喜ばれています。</p>
+        </article>
+        <article class="product">
+          <p class="product__icon">🫙</p>
+          <h3 class="product__name">ポンカンジャム</h3>
+          <p class="product__text">皮も果肉も丸ごと使った、香り豊かなジャム。トーストやヨーグルトに。</p>
+        </article>
+        <article class="product">
+          <p class="product__icon">🎁</p>
+          <h3 class="product__name">ギフトセット</h3>
+          <p class="product__text">大切な方への贈り物に。季節の詰め合わせセットをご用意しています。</p>
+        </article>
+      </div>
+      <div class="reveal" style="margin-top:28px;">
+        <a class="btn btn--primary" href="#contact">ご注文・お問い合わせ</a>
+      </div>
+    </section>
+
+    <!-- ===== フォトストリップ ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <img src="assets/img/strip1.png" alt="">
+        <img src="assets/img/strip2.png" alt="">
+        <img src="assets/img/strip3.png" alt="">
+        <img src="assets/img/strip4.png" alt="">
+      </div>
+    </div>
+
+    <!-- ===== 串本の魅力を伝えたい ===== -->
+    <section class="section--feature">
+      <h2 class="section-title reveal">四季彩園を通じて、<br>串本の魅力を伝えたい</h2>
+      <p class="lead reveal">私たちが大切に育てたポンカンを通じて、串本町の豊かな自然や風土にも興味を持っていただけたら嬉しいです。このまちの魅力を、少しでもお届けできればと思っています。</p>
+    </section>
+
+    <!-- ===== 串本のこと ===== -->
+    <section class="section" id="kushimoto">
+      <h2 class="section-title">本州最南端の町、串本町</h2>
+      <p class="lead">弘法大師ゆかりの重畳山のふもとに位置する串本町。黒潮おどる太平洋に面したこの地で、四季彩園は代々ポンカン栽培を続けています。わたしたちは、ポンカンを通じて串本の魅力を全国に伝えることを目指しています。</p>
+
+      <div class="spots reveal">
+        <article class="spot">
+          <div class="spot__head">
+            <span class="pill pill--orange">その1</span>
+            <p class="spot__sub">日本最大のテーブルサンゴ</p>
+            <h3 class="spot__title">串本海中公園</h3>
+          </div>
+          <img src="assets/img/coral.jpg" alt="串本海中公園のテーブルサンゴ">
+          <p class="spot__text">串本海中公園は日本最大のテーブルサンゴが広がる国内有数のダイビングスポット。透き通った海の美しさは格別です。</p>
+        </article>
+        <article class="spot">
+          <div class="spot__head">
+            <span class="pill pill--orange">その2</span>
+            <p class="spot__sub">天然記念物</p>
+            <h3 class="spot__title">橋杭岩</h3>
+          </div>
+          <img src="assets/img/hashigui.jpg" alt="橋杭岩の朝日">
+          <p class="spot__text">海の中に大小40余りの岩柱が並ぶ奇景。国の天然記念物で、朝日に照らされる幻想的な景色は串本を代表する絶景です。</p>
+        </article>
+        <article class="spot">
+          <div class="spot__head">
+            <span class="pill pill--orange">その3</span>
+            <p class="spot__sub">世界遺産</p>
+            <h3 class="spot__title">熊野古道</h3>
+          </div>
+          <img src="assets/img/kumano.jpg" alt="熊野古道">
+          <p class="spot__text">串本は熊野古道の終着エリア。古来より多くの人々が歩いた霊験あらたかな道で、豊かな自然と歴史を感じることができます。</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="garland" aria-hidden="true"></div>
+
+    <!-- ===== HISTORY ===== -->
+    <section class="section">
+      <div class="reveal">
+        <div class="history-head">
+          <h2 class="history-head__title">串本は、本州最南端の地でした</h2>
+          <span class="history-head__en">HISTORY</span>
+        </div>
+        <p class="lead">弘法大師ゆかりの重畳山のふもとに位置する串本町。黒潮おどる太平洋に面したこの地で、四季彩園は代々ポンカン栽培を続けています。わたしたちは、ポンカンを通じて串本の魅力を全国に伝えることを目指しています。</p>
+      </div>
+
+      <div class="histories reveal">
+        <article class="history">
+          <span class="history__no">その1</span>
+          <h3 class="history__title">☀️ 黒潮が育む<br>温暖な気候</h3>
+          <p class="history__text">本州最南端に位置する串本町は、黒潮の影響で年間を通じて温暖。この気候がポンカン栽培に最適な環境をつくっています。</p>
+        </article>
+        <article class="history">
+          <span class="history__no">その2</span>
+          <h3 class="history__title">⛰️ 弘法大師ゆかりの<br>重畳山</h3>
+          <p class="history__text">四季彩園は弘法大師ゆかりの重畳山のふもとに位置。古くから人々に親しまれてきた豊かな自然の中でポンカンを育てています。</p>
+        </article>
+        <article class="history">
+          <span class="history__no">その3</span>
+          <h3 class="history__title">🎖️ プレミア和歌山<br>推奨品に認定</h3>
+          <p class="history__text">安全・安心を基本に和歌山らしさを持つ優良県産品として、四季彩園のポンカンジュースはプレミア和歌山推奨品に認定されています。</p>
+        </article>
+      </div>
+
+      <div class="scenery reveal">
+        <figure><img src="assets/img/chodozan.jpg" alt="重畳山"><figcaption>✦ 重畳山 ✦</figcaption></figure>
+        <figure><img src="assets/img/coral2.jpg" alt="串本海中公園"><figcaption>✦ 串本海中公園 ✦</figcaption></figure>
+        <figure><img src="assets/img/hashigui2.jpg" alt="橋杭岩"><figcaption>✦ 橋杭岩 ✦</figcaption></figure>
+        <figure><img src="assets/img/kumano2.jpg" alt="熊野古道"><figcaption>✦ 熊野古道 ✦</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== フッター / お問い合わせ ===== -->
+    <footer class="footer" id="contact">
+      <div class="footer__stripe" aria-hidden="true"></div>
+      <div class="footer__inner">
+        <div class="reveal center">
+          <p class="footer__logo brand-logo">
+            <span class="brand-logo__ja">四季<span class="brand-logo__accent">彩</span>園</span>
+            <span class="brand-logo__en">SHIKISAIEN</span>
+          </p>
+          <ul class="contact">
+            <li>📍 〒649-4125 和歌山県東牟婁郡串本町姫617-8</li>
+            <li>📞 Tel. <a href="tel:09069019579">090-6901-9579</a>　📠 FAX. 0735-72-1849</li>
+            <li>✉️ Mail. <a href="mailto:hime.ponkan@gmail.com">hime.ponkan@gmail.com</a></li>
+            <li>📷 Instagram. <a href="https://instagram.com/SHIKISAIEN" target="_blank" rel="noopener">@SHIKISAIEN</a></li>
+          </ul>
+          <div class="certs">
+            <span class="cert"><span class="cert__dot cert__dot--a"></span>和歌山県特別栽培農産物認証</span>
+            <span class="cert"><span class="cert__dot cert__dot--b"></span>プレミア和歌山推奨品</span>
+          </div>
+        </div>
+
+        <div class="team reveal">
+          <img src="assets/img/team1.jpg" alt="スタッフ">
+          <img src="assets/img/team2.jpg" alt="スタッフ">
+          <img src="assets/img/team3.jpg" alt="スタッフ">
+          <img src="assets/img/team4.jpg" alt="スタッフ">
+          <img src="assets/img/team5.jpg" alt="スタッフ">
+        </div>
+        <p class="footer__tagline reveal">✦ たくさんの笑顔のために、まごころ込めて育てています。 ✦</p>
+
+        <div class="footer__cta reveal">
+          <a class="btn btn--primary" href="tel:09069019579">📞 電話で注文する</a>
+          <a class="btn btn--green" href="mailto:hime.ponkan@gmail.com">✉️ メールで問い合わせ</a>
+        </div>
+      </div>
+      <div class="garland garland--sm" aria-hidden="true"></div>
+      <p class="copyright">© 四季彩園 SHIKISAIEN</p>
+    </footer>
+
+  </main>
+
+</section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
