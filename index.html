@@ -12,6 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Kaisei+Decol:wght@400;500;700&family=Zen+Antique&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Kaisei+Decol:wght@400;500;700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%23e87d1e'/><circle cx='16' cy='16' r='11' fill='white'/><line x1='16' y1='5' x2='16' y2='27' stroke='%23e87d1e' stroke-width='1.8'/><line x1='5' y1='16' x2='27' y2='16' stroke='%23e87d1e' stroke-width='1.8'/><line x1='8' y1='8' x2='24' y2='24' stroke='%23e87d1e' stroke-width='1.8'/><line x1='24' y1='8' x2='8' y2='24' stroke='%23e87d1e' stroke-width='1.8'/></svg>">
 <link rel="stylesheet" href="css/style.css">
 <!-- <link rel="stylesheet" href="css/overlay.css"> -->
 </head>
@@ -28,9 +31,9 @@
 <section id="main-content">
   <!-- ===== 固定ヘッダー（スクロールで出現） ===== -->
   <header class="site-header" id="siteHeader">
-    <div class="site-header-logo">
-      <p class="site-header-logo__ja">四季<span class="site-header-logo__accent">彩</span>園</p>
-      <p class="site-header-logo__en">SHIKISAIEN</p>
+    <div class="site-logo">
+      <p class="site-logo__ja">四季<span class="site-logo__accent">彩</span>園</p>
+      <p class="site-logo__en">SHIKI<span class="site-logo__accent">SAI</span>EN</p>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
       <svg class="nav-toggle__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -54,24 +57,34 @@
     <button class="nav-drawer__close" id="navClose" aria-label="閉じる">✕</button>
     <nav class="nav-drawer__nav">
       <ul>
-        <li><a href="#farm">四季彩園について</a></li>
-        <li><a href="#kodawari">ポンカンへのこだわり</a></li>
+        <li><a href="#farm">串本に根ざす、四季彩園</a></li>
+        <li><a href="#values">大切にしていること</a></li>
+        <li><a href="#kodawari">四季彩園のポンカンへのこだわり</a></li>
         <li><a href="#products">ポンカンを味わう</a></li>
-        <li><a href="#kushimoto">串本のこと</a></li>
+        <li><a href="#taiken">体験プログラム</a></li>
+        <li>
+          <a href="#kushimoto">本州最南端の町、串本町</a>
+          <ul class="nav-sub-list">
+            <li><a href="#spots">串本町の魅力的なスポット</a></li>
+            <li><a href="#gourmet">串本のグルメ</a></li>
+            <li><a href="#blog">四季彩園＆串本訪問紀</a></li>
+            <li><a href="#access">串本へのアクセス</a></li>
+          </ul>
+        </li>
         <li><a href="#contact">ご注文・お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
   <div class="nav-overlay" id="navOverlay"></div>
 
-  <!-- ===== 追従CTA（スクロールで出現） ===== -->
-  <!-- <a class="float-cta" id="floatCta" href="#contact">ご注文はこちら</a> -->
-
   <main class="wrap">
 
     <!-- ===== HERO ===== -->
     <section class="hero" aria-label="四季彩園 串本ポンカンジュース">
+      <img class="hero__bg" src="assets/img/hero-bg.png" alt="" fetchpriority="high">
       <h1 class="hero__title reveal">太陽の恵みを<br>　まるごとひとつに</h1>
+      <!-- <img src="assets/img/logo-clipped.png" alt="四季彩園ロゴ" class="hero__logo reveal"> -->
+      <!-- <img src="assets/img/logo-transparent.png" alt="四季彩園ロゴ" class="hero__logo reveal"> -->
     </section>
 
     <!-- ===== 四季彩園について ===== -->
@@ -85,7 +98,7 @@
         </div>
       </div>
       <div class="reveal">
-        <p>約50a（5,000㎡）の農園で、量より質を大切に。一つひとつ手をかけて育てるために、栽培できる量には限りがあります。</p>
+        <p>約50a（5,000㎡）の農園で、量より質を大切に。一つひとつ手をかけて育てています。</p>
       </div>
       <img src="assets/img/cultivate.png" alt="ポンカン栽培風景" class="cultivate-img reveal">
     </section>
@@ -97,17 +110,62 @@
     <section class="section" id="values">
       <h2 class="section-title reveal">大切にしていること</h2>
       <div class="values reveal">
-        <div class="value">
-          <div class="value__head"><span class="value__no">1</span><h3 class="value__title">おいしいと、向き合い続ける</h3></div>
+        <div class="value border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipV1"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipV1)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">01</span>
+          </div>
+          <h3 class="value__title">おいしいと<br>向き合い続ける</h3>
           <p class="value__text">「おいしい」には終わりがありません。収穫のたびに自分たちで食べて味を確かめ、毎年少しずつ理想に近づいていく。それが四季彩園の農業です。</p>
         </div>
-        <div class="value">
-          <div class="value__head"><span class="value__no">2</span><h3 class="value__title">口にするものだから</h3></div>
+        <div class="value border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipV2"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipV2)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">02</span>
+          </div>
+          <h3 class="value__title">安心と安全</h3>
           <p class="value__text">家族が食べるものと同じものをお届けしたい。だから農薬も化学肥料も使わない。安心して食べてもらえることが、一番のこだわりです。</p>
         </div>
-        <div class="value value--last">
-          <div class="value__head"><span class="value__no">3</span><h3 class="value__title">串本のポンカンを、広めたい</h3></div>
-          <p class="value__text">本州最南端のまち串本で育ったポンカン。この土地の豊かさを、一口のおいしさとして全国に届けたいと思っています。</p>
+        <div class="value border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipV3"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipV3)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">03</span>
+          </div>
+          <h3 class="value__title">串本の魅力を<br>伝えたい</h3>
+          <p class="value__text">串本の豊かな自然と風土が、私たちのポンカンを生み出しています。大好きなこのまちのことを、ポンカンを通じて知ってもらえること、それが私たちの願いです。</p>
         </div>
       </div>
     </section>
@@ -122,33 +180,89 @@
         <p class="lead">甘いだけではない、絶妙な糖酸バランス。雑味がなく、スッキリとした後味——それが四季彩園のポンカンです。土づくりから収穫まで、おいしいと向き合い続けることがわたしたちの農園の姿勢です。</p>
       </div>
 
-      <div class="duo reveal">
-        <img src="assets/img/juice_bottle.jpg" alt="四季彩園のポンカンジュース">
-        <img src="assets/img/ponkan_tree.jpg" alt="完熟ポンカン">
-      </div>
-
       <div class="thought-cloud-wrap reveal"><span class="thought-cloud">おいしいポンカンの秘訣</span></div>
       <div class="reasons reveal">
-        <article class="reason">
-          <div class="reason__head"><span class="reason__no">01</span><h3 class="reason__title">本州最南端の太陽</h3></div>
+        <article class="reason border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipR1"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipR1)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">01</span>
+          </div>
+          <div class="reason__head"><h3 class="reason__title">本州最南端の太陽</h3></div>
           <p class="reason__text">串本町は年間を通じて温暖。燦々と降り注ぐ太陽のもとで育ったポンカンは糖度12度以上。深い甘みとスッキリした後味を生みだします。</p>
         </article>
-        <article class="reason">
-          <div class="reason__head"><span class="reason__no">02</span><h3 class="reason__title">甘いだけじゃない、糖酸バランス</h3></div>
+        <article class="reason border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipR2"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipR2)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">02</span>
+          </div>
+          <div class="reason__head"><h3 class="reason__title">甘いだけじゃない、<br>糖酸バランス</h3></div>
           <p class="reason__text">糖度12度以上でありながら、甘さと酸味が絶妙にバランス。雑味がなくスッキリとした後味で、ついついたくさん食べてしまうと好評です。</p>
         </article>
-        <article class="reason">
-          <div class="reason__head"><span class="reason__no">03</span><h3 class="reason__title">ひとつひとつ、手で選ぶ</h3></div>
-          <p class="reason__text">選果機は使わず、ひとつひとつ手に持って見て、触れて、重さを感じながら選別。予措（追熟）をせず収穫後すぐ出荷するから、フレッシュでジューシーなポンカン本来のおいしさが届きます。</p>
+        <article class="reason border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipR3"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipR3)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">03</span>
+          </div>
+          <h3 class="reason__title">ひとつひとつ<br>手で選ぶ</h3>
+          <p class="reason__text">選果機は使わず、ひとつひとつ手に持って見て、触れて、重さを感じながら選別。予措（追熟）をせず収穫後すぐ出荷するため、フレッシュでジューシーなポンカン本来のおいしさが届きます。</p>
         </article>
-        <article class="reason">
-          <div class="reason__head"><span class="reason__no">04</span><h3 class="reason__title">土づくりから、有機栽培</h3></div>
+        <article class="reason border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClipR4"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClipR4)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">04</span>
+          </div>
+          <h3 class="reason__title">土づくりから<br>有機栽培</h3>
           <p class="reason__text">有機率100％の有機肥料・自作有機堆肥を使用。イセエビガラ、卵ガラ、ヌカ、モミガラなど約10種類の素材から作る堆肥で、土の力からおいしさを育てています。</p>
         </article>
       </div>
 
-      <div class="result reveal">
-        <p>収穫のたびに自分たちで食べて味を確かめる。<br>おいしいを守るために、妥協しない。<br>それが<span class="result__brand">四季彩園</span>の<br><span class="result__product">ポンカンづくり</span>です。</p>
+      <div class="result reveal center">
+        <p>収穫のたびに自分たちで食べて味を確かめる。<br>おいしいを守るために、妥協しない。<br>それが四季彩園のポンカンづくりです。</p>
+        <img src="assets/img/result-clipped.png" alt="ポンカンを収穫する様子" class="result__photo">
       </div>
     </section>
 
@@ -157,37 +271,61 @@
     <section class="center section" id="products">
       <div class="reveal">
         <h2 class="section-title">ポンカンを味わう</h2>
-        <p class="lead">四季彩園のポンカンは、さまざまな形でお楽しみいただけます。ご注文・お問い合わせはお電話またはメールにて承っております。</p>
+        <p class="lead">四季彩園のポンカンは、さまざまな形でお楽しみいただけます。</p>
       </div>
       <div class="products reveal">
-        <article class="product">
-          <p class="product__icon">🍊</p>
+        <article class="product border">
+          <img src="assets/img/product-ponkan.png" alt="ポンカン" class="product__img">
           <h3 class="product__name">ポンカン</h3>
           <p class="product__text">厳選した完熟ポンカンをそのまま。フレッシュでジューシーな食感をお楽しみください。</p>
         </article>
-        <article class="product">
-          <p class="product__icon">🧃</p>
-          <h3 class="product__name">ポンカンジュース</h3>
+        <article class="product border">
+          <img src="assets/img/product-juice.png" alt="ポンカンジュース" class="product__img">
+          <h3 class="product__name">ポンカン<br>ジュース</h3>
           <p class="product__text">収穫後すぐに搾った100%ストレートジュース。無添加でポンカンそのままの味わいです。</p>
         </article>
-        <article class="product">
-          <p class="product__icon">🫙</p>
+        <article class="product border">
+          <img src="assets/img/product-jelly.png" alt="ポンカンジュレ" class="product__img">
           <h3 class="product__name">ポンカンジュレ</h3>
           <p class="product__text">ポンカンの風味をそのままに閉じ込めた、なめらかなジュレ。贈り物にも喜ばれています。</p>
         </article>
-        <article class="product">
-          <p class="product__icon">🫙</p>
+        <article class="product border">
+          <img src="assets/img/product-jam.png" alt="ポンカンジャム" class="product__img">
           <h3 class="product__name">ポンカンジャム</h3>
           <p class="product__text">皮も果肉も丸ごと使った、香り豊かなジャム。トーストやヨーグルトに。</p>
         </article>
-        <article class="product">
-          <p class="product__icon">🎁</p>
+        <article class="product border">
+          <img src="assets/img/product-gift.png" alt="ギフトセット" class="product__img">
           <h3 class="product__name">ギフトセット</h3>
           <p class="product__text">大切な方への贈り物に。季節の詰め合わせセットをご用意しています。</p>
         </article>
+        <img src="assets/img/ponkan.png" alt="ポンカン" class="product__img ponkan-deco">
       </div>
       <div class="reveal" style="margin-top:28px;">
-        <a class="btn btn--primary" href="#contact">ご注文・お問い合わせ</a>
+        <a class="btn btn--primary" href="https://ponkanhime.com/shop/">ショップはこちら</a>
+      </div>
+    </section>
+
+    <!-- ===== 体験プログラム ===== -->
+    <section class="taiken-hero reveal" id="taiken">
+      <img src="assets/img/taiken.png" alt="体験プログラム" class="taiken-hero__bg" loading="lazy">
+      <div class="taiken-hero__content">
+        <h2 class="section-title">体験プログラム</h2>
+        <div class="taiken-card">
+          <ul class="taiken-list">
+            <li>
+              <span class="taiken-list__feature">食べ放題・お土産付き</span>
+              <span class="taiken-list__label">ポンカン狩り体験</span>
+              <span class="taiken-list__meta">12月下旬〜1月中旬 ／ 3,000円〜</span>
+            </li>
+            <li>
+              <span class="taiken-list__label">農作業体験</span>
+              <span class="taiken-list__meta">2月〜11月 ／ 2,000円〜</span>
+            </li>
+          </ul>
+          <p class="taiken-note">※いずれも要予約</p>
+          <a class="btn btn--green" href="https://ponkanhime.com/taiken/" target="_blank" rel="noopener">体験の詳細を見る →</a>
+        </div>
       </div>
     </section>
 
@@ -198,132 +336,229 @@
         <img src="assets/img/strip2.png" alt="">
         <img src="assets/img/strip3.png" alt="">
         <img src="assets/img/strip4.png" alt="">
+        <img src="assets/img/strip1.png" alt="">
+        <img src="assets/img/strip2.png" alt="">
+        <img src="assets/img/strip3.png" alt="">
+        <img src="assets/img/strip4.png" alt="">
       </div>
     </div>
 
     <!-- ===== 串本の魅力を伝えたい ===== -->
     <section class="section--feature">
+      <img class="feature__bg" src="assets/img/feature.png" alt="" loading="lazy">
       <h2 class="section-title reveal">四季彩園を通じて、<br>串本の魅力を伝えたい</h2>
-      <p class="lead reveal">私たちが大切に育てたポンカンを通じて、串本町の豊かな自然や風土にも興味を持っていただけたら嬉しいです。このまちの魅力を、少しでもお届けできればと思っています。</p>
+      <p class="lead reveal">串本の豊かな自然と風土が、私たちのポンカンを生み出しています。大好きなこのまちのことを、ポンカンを通じて知ってもらえること、それが私たちの願いです。</p>
     </section>
 
-    <!-- ===== 串本のこと ===== -->
+    <!-- ===== ABOUT KUSHIMOTO ===== -->
     <section class="section" id="kushimoto">
       <h2 class="section-title">本州最南端の町、串本町</h2>
-      <p class="lead">弘法大師ゆかりの重畳山のふもとに位置する串本町。黒潮おどる太平洋に面したこの地で、四季彩園は代々ポンカン栽培を続けています。わたしたちは、ポンカンを通じて串本の魅力を全国に伝えることを目指しています。</p>
+      <p class="lead">本州最南端に位置する串本町。黒潮うねる太平洋に面し、豊かな自然と深い歴史が息づく、魅力あふれる土地です。</p>
+    </section>
+  </main>
+
+  <div class="facts">
+    <div class="fact fact--film fact--film1">
+      <div class="fact__film-wrap">
+        <img src="assets/img/film1.png" alt="串本の海" class="fact__film-img" loading="lazy">
+        <div class="fact__film-text">
+          <h3 class="fact__title">黒潮が育む<br>温暖な気候</h3>
+          <p class="fact__desc">黒潮の影響で年間を通じて温暖。豊かな気候が、この土地の自然をはぐくんでいます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="fact fact--film fact--film2">
+      <div class="fact__film-wrap">
+        <img src="assets/img/film2.png" alt="串本の岬" class="fact__film-img" loading="lazy">
+        <div class="fact__film-text">
+          <h3 class="fact__title">本州最南端の<br>岬、串本</h3>
+          <p class="fact__desc">太平洋に突き出た日本列島の端。一年を通じて日差しが豊かで、南国のような恵まれた自然が広がります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- ===== 魅力的なスポット ===== -->
+    <section class="section">
+      <div class="subsection-title-wrap reveal" id="spots"><h3 class="subsection-title">串本町の<br>魅力的なスポット</h3></div>
+      <p class="lead">串本には、美しい自然や歴史的なスポットなど、魅力的な場所がたくさんあります。四季彩園のポンカンとともに、ぜひ訪れてみてください。</p>
 
       <div class="spots reveal">
-        <article class="spot">
-          <div class="spot__head">
-            <span class="pill pill--orange">その1</span>
-            <p class="spot__sub">日本最大のテーブルサンゴ</p>
-            <h3 class="spot__title">串本海中公園</h3>
+        <article class="spot border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClip"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClip)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">01</span>
           </div>
-          <img src="assets/img/coral.jpg" alt="串本海中公園のテーブルサンゴ">
-          <p class="spot__text">串本海中公園は日本最大のテーブルサンゴが広がる国内有数のダイビングスポット。透き通った海の美しさは格別です。</p>
+          <h3 class="spot__title">串本海中公園</h3>
+          <img src="assets/img/coral.png" alt="串本海中公園のテーブルサンゴ">
+          <p class="spot__text">串本海中公園は<strong>日本最大のテーブルサンゴ</strong>が広がる国内有数のダイビングスポット。透き通った海の美しさは格別です。</p>
         </article>
-        <article class="spot">
-          <div class="spot__head">
-            <span class="pill pill--orange">その2</span>
-            <p class="spot__sub">天然記念物</p>
-            <h3 class="spot__title">橋杭岩</h3>
+        <article class="spot border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClip2"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClip2)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">02</span>
           </div>
+          <h3 class="spot__title">橋杭岩</h3>
           <img src="assets/img/hashigui.jpg" alt="橋杭岩の朝日">
-          <p class="spot__text">海の中に大小40余りの岩柱が並ぶ奇景。国の天然記念物で、朝日に照らされる幻想的な景色は串本を代表する絶景です。</p>
+          <p class="spot__text"><strong>海の中に大小40余りの岩柱が並ぶ奇景</strong>。国の天然記念物で、朝日に照らされる幻想的な景色は串本を代表する絶景です。</p>
         </article>
-        <article class="spot">
-          <div class="spot__head">
-            <span class="pill pill--orange">その3</span>
-            <p class="spot__sub">世界遺産</p>
-            <h3 class="spot__title">熊野古道</h3>
+        <article class="spot border">
+          <div class="spot__icon-wrap">
+            <svg class="spot__orange" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="fruitClip3"><circle cx="20" cy="20" r="14"/></clipPath></defs>
+              <circle cx="20" cy="20" r="19" fill="var(--orange-light)"/>
+              <circle cx="20" cy="20" r="16" fill="white"/>
+              <circle cx="20" cy="20" r="14" fill="var(--orange-light)"/>
+              <g clip-path="url(#fruitClip3)">
+                <line x1="20" y1="4" x2="20" y2="36" stroke="white" stroke-width="2"/>
+                <line x1="4" y1="20" x2="36" y2="20" stroke="white" stroke-width="2"/>
+                <line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="white" stroke-width="2"/>
+                <line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="white" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="spot__number">03</span>
           </div>
+          <h3 class="spot__title">熊野古道</h3>
           <img src="assets/img/kumano.jpg" alt="熊野古道">
-          <p class="spot__text">串本は熊野古道の終着エリア。古来より多くの人々が歩いた霊験あらたかな道で、豊かな自然と歴史を感じることができます。</p>
+          <p class="spot__text">串本は<strong>熊野古道の終着エリア</strong>。古来より多くの人々が歩いた霊験あらたかな道で、豊かな自然と歴史を感じることができます。</p>
         </article>
       </div>
     </section>
 
+    <!-- ===== garland ===== -->
     <div class="garland" aria-hidden="true"></div>
 
-    <!-- ===== HISTORY ===== -->
+    <!-- ===== グルメ ===== -->
     <section class="section">
-      <div class="reveal">
-        <div class="history-head">
-          <h2 class="history-head__title">串本は、本州最南端の地でした</h2>
-          <span class="history-head__en">HISTORY</span>
+      <div class="subsection-title-wrap reveal" id="gourmet"><h3 class="subsection-title">串本のグルメ</h3></div>
+      <p class="lead reveal">串本町は、海の幸も山の幸も豊富。新鮮な魚介類や郷土料理など、地元ならではの味覚を楽しむことができます。</p>
+      <div class="gourmet__grid reveal">
+        <div class="gourmet__item">
+          <div class="gourmet__img-wrap"><img src="assets/img/gourumet-maguro.png" alt="まぐろ" class="gourmet__img"></div>
+          <h3 class="gourmet__name">まぐろ</h3>
+          <p class="gourmet__desc">串本といえば新鮮なまぐろ</p>
         </div>
-        <p class="lead">弘法大師ゆかりの重畳山のふもとに位置する串本町。黒潮おどる太平洋に面したこの地で、四季彩園は代々ポンカン栽培を続けています。わたしたちは、ポンカンを通じて串本の魅力を全国に伝えることを目指しています。</p>
+        <div class="gourmet__item">
+          <div class="gourmet__img-wrap"><img src="assets/img/gourmet-iseebi.png" alt="伊勢海老" class="gourmet__img"></div>
+          <h3 class="gourmet__name">伊勢海老</h3>
+          <p class="gourmet__desc">ぷりぷりの食感と濃厚な旨み</p>
+        </div>
+        <div class="gourmet__item">
+          <div class="gourmet__img-wrap"><img src="assets/img/gourmet-katsuo-chaduke.png" alt="かつお茶漬け" class="gourmet__img"></div>
+          <h3 class="gourmet__name">かつお<br>茶漬け</h3>
+          <p class="gourmet__desc">さっぱり美味しい郷土の味</p>
+        </div>
       </div>
+      <p class="gourmet__note">※画像はイメージです</p>
+    </section>
 
-      <div class="histories reveal">
-        <article class="history">
-          <span class="history__no">その1</span>
-          <h3 class="history__title">☀️ 黒潮が育む<br>温暖な気候</h3>
-          <p class="history__text">本州最南端に位置する串本町は、黒潮の影響で年間を通じて温暖。この気候がポンカン栽培に最適な環境をつくっています。</p>
-        </article>
-        <article class="history">
-          <span class="history__no">その2</span>
-          <h3 class="history__title">⛰️ 弘法大師ゆかりの<br>重畳山</h3>
-          <p class="history__text">四季彩園は弘法大師ゆかりの重畳山のふもとに位置。古くから人々に親しまれてきた豊かな自然の中でポンカンを育てています。</p>
-        </article>
-        <article class="history">
-          <span class="history__no">その3</span>
-          <h3 class="history__title">🎖️ プレミア和歌山<br>推奨品に認定</h3>
-          <p class="history__text">安全・安心を基本に和歌山らしさを持つ優良県産品として、四季彩園のポンカンジュースはプレミア和歌山推奨品に認定されています。</p>
-        </article>
+    <!-- ===== garland ===== -->
+    <div class="garland" aria-hidden="true"></div>
+
+    <!-- ===== Instagram ===== -->
+    <section class="section">
+      <div class="subsection-title-wrap reveal" id="blog"><h3 class="subsection-title">四季彩園＆串本<br>訪問紀</h3></div>
+      <p class="lead reveal">収穫ボランティアとして四季彩園に訪れた方のストーリーです。<br>旅の道のりから、串本のごはん、農園の風景、農作業の様子まで、串本と四季彩園の魅力がぎゅっと詰まっています。<br>旅気分で、是非のぞいてみてください。</p>
+      <div class="insta-highlight reveal">
+        <video class="insta-highlight__img" src="assets/img/instagram.mov" poster="assets/img/instagram.png" controls playsinline></video>
       </div>
-
-      <div class="scenery reveal">
-        <figure><img src="assets/img/chodozan.jpg" alt="重畳山"><figcaption>✦ 重畳山 ✦</figcaption></figure>
-        <figure><img src="assets/img/coral2.jpg" alt="串本海中公園"><figcaption>✦ 串本海中公園 ✦</figcaption></figure>
-        <figure><img src="assets/img/hashigui2.jpg" alt="橋杭岩"><figcaption>✦ 橋杭岩 ✦</figcaption></figure>
-        <figure><img src="assets/img/kumano2.jpg" alt="熊野古道"><figcaption>✦ 熊野古道 ✦</figcaption></figure>
+      <div class="center" style="margin-top:10px;">
+        <a class="insta-highlight__badge" href="https://www.instagram.com/stories/highlights/18008925062471943/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram で見る</a>
+      </div>
+      <div class="center">
+        <div class="kanko-bubble reveal">
+          <p class="kanko-bubble__text">もっと串本を知りたい方は</p>
+          <a class="btn btn--white" href="https://kankou-kushimoto.jp/" target="_blank" rel="noopener">南紀串本観光ガイド →</a>
+        </div>
       </div>
     </section>
+    
+    <!-- ===== garland ===== -->
+    <div class="garland" aria-hidden="true"></div>
+
+    <!-- ===== アクセス ===== -->
+    <section class="section">
+      <div class="subsection-title-wrap reveal" id="access"><h3 class="subsection-title">串本へのアクセス</h3></div>
+      <div class="access reveal">
+        <div class="access__item">
+          <i class="fa-solid fa-train"></i>
+          <p class="access__text">JR新宮駅から特急で約40分<span class="access__note">（くろしお利用）</span></p>
+        </div>
+        <div class="access__item">
+          <i class="fa-solid fa-car"></i>
+          <p class="access__text">大阪方面から車で約3時間30分<span class="access__note">（阪和自動車道経由）</span></p>
+        </div>
+        <div class="access__item">
+          <i class="fa-solid fa-plane-up"></i>
+          <p class="access__text">南紀白浜空港から車で約1時間40分</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 民泊 ===== -->
+    <a class="minpaku-hero reveal" href="https://ponkanhime.com/%e6%b0%91%e6%b3%8a%e3%80%80%e5%a7%ab%e3%81%93%e3%81%84%e3%81%97%ef%bc%88%e5%a7%ab%e5%b0%8f%e7%9f%b3%ef%bc%89/" target="_blank" rel="noopener">
+      <img src="assets/img/minpaku.png" alt="民泊 姫こいし" class="minpaku-hero__bg" loading="lazy">
+      <div class="minpaku-hero__content">
+        <h3 class="minpaku-hero__title">民泊「姫こいし」</h3>
+        <p class="minpaku-hero__desc">農園のすぐそば、串本でゆったりとした時間を。<br>JR紀伊姫駅徒歩1分 ／ 一棟貸し2〜6名</p>
+        <span class="btn btn--outline-white">詳しく見る →</span>
+      </div>
+    </a>
 
     <!-- ===== フッター / お問い合わせ ===== -->
     <footer class="footer" id="contact">
       <div class="footer__stripe" aria-hidden="true"></div>
       <div class="footer__inner">
         <div class="reveal center">
-          <p class="footer__logo brand-logo">
-            <span class="brand-logo__ja">四季<span class="brand-logo__accent">彩</span>園</span>
-            <span class="brand-logo__en">SHIKISAIEN</span>
-          </p>
+          <div class="site-logo">
+            <p class="site-logo__ja">四季<span class="site-logo__accent">彩</span>園</p>
+            <p class="site-logo__en">SHIKI<span class="site-logo__accent">SAI</span>EN</p>
+          </div>
           <ul class="contact">
-            <li>📍 〒649-4125 和歌山県東牟婁郡串本町姫617-8</li>
-            <li>📞 Tel. <a href="tel:09069019579">090-6901-9579</a>　📠 FAX. 0735-72-1849</li>
-            <li>✉️ Mail. <a href="mailto:hime.ponkan@gmail.com">hime.ponkan@gmail.com</a></li>
-            <li>📷 Instagram. <a href="https://instagram.com/SHIKISAIEN" target="_blank" rel="noopener">@SHIKISAIEN</a></li>
+            <li>〒649-4125 和歌山県東牟婁郡串本町姫617-8</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:09069019579">090-6901-9579</a>　 <i class="fa-solid fa-fax"></i> <span style="color:var(--green);font-weight:700;">0735-72-1849</span></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hime.ponkan@gmail.com">hime.ponkan@gmail.com</a></li>
+            <li><i class="fa-brands fa-square-instagram"></i> <a href="https://instagram.com/SHIKISAIEN" target="_blank" rel="noopener" class="underline">@SHIKISAIEN</a></li>
           </ul>
           <div class="certs">
-            <span class="cert"><span class="cert__dot cert__dot--a"></span>和歌山県特別栽培農産物認証</span>
-            <span class="cert"><span class="cert__dot cert__dot--b"></span>プレミア和歌山推奨品</span>
+            <span class="cert"><img src="assets/img/wakayama-ninsho.png" alt="和歌山県特別栽培農産物認証" class="cert__img">和歌山県特別栽培農産物認証</span>
+            <span class="cert"><img src="assets/img/premia-wakayama.png" alt="プレミア和歌山推奨品" class="cert__img">プレミア和歌山推奨品</span>
           </div>
         </div>
-
-        <div class="team reveal">
-          <img src="assets/img/team1.jpg" alt="スタッフ">
-          <img src="assets/img/team2.jpg" alt="スタッフ">
-          <img src="assets/img/team3.jpg" alt="スタッフ">
-          <img src="assets/img/team4.jpg" alt="スタッフ">
-          <img src="assets/img/team5.jpg" alt="スタッフ">
-        </div>
-        <p class="footer__tagline reveal">✦ たくさんの笑顔のために、まごころ込めて育てています。 ✦</p>
-
-        <div class="footer__cta reveal">
-          <a class="btn btn--primary" href="tel:09069019579">📞 電話で注文する</a>
-          <a class="btn btn--green" href="mailto:hime.ponkan@gmail.com">✉️ メールで問い合わせ</a>
-        </div>
       </div>
-      <div class="garland garland--sm" aria-hidden="true"></div>
       <p class="copyright">© 四季彩園 SHIKISAIEN</p>
     </footer>
 
-  </main>
+  </div>
 
 </section>
 
+  <button class="page-top" id="pageTop" aria-label="ページトップへ">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
   <script src="js/main.js"></script>
 </body>
 </html>

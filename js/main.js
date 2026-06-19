@@ -27,6 +27,7 @@
   // /* ---- 2) 固定ヘッダー / 追従CTA ---- */
   var header = document.getElementById('siteHeader');
   var floatCta = document.getElementById('floatCta');
+  var pageTop = document.getElementById('pageTop');
   var SHOW_AFTER = 480; // 何px スクロールしたら表示するか
 
   function onScroll() {
@@ -34,7 +35,12 @@
     var show = y > SHOW_AFTER;
     if (header) header.classList.toggle('is-show', show);
     if (floatCta) floatCta.classList.toggle('is-show', show);
+    if (pageTop) pageTop.classList.toggle('is-show', show);
   }
+
+  if (pageTop) pageTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -58,7 +64,15 @@
     navDrawer.setAttribute('aria-hidden', 'true');
   }
 
-  if (navToggle)  navToggle.addEventListener('click', openNav);
+  if (navToggle) navToggle.addEventListener('click', function() {
+    navToggle.classList.add('is-spinning');
+    var icon = navToggle.querySelector('.nav-toggle__icon');
+    icon.addEventListener('animationend', function handler() {
+      icon.removeEventListener('animationend', handler);
+      navToggle.classList.remove('is-spinning');
+      openNav();
+    });
+  });
   if (navClose)   navClose.addEventListener('click', closeNav);
   if (navOverlay) navOverlay.addEventListener('click', closeNav);
   if (navDrawer)  navDrawer.querySelectorAll('a').forEach(function(a){
